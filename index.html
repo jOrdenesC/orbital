@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Solar</title>
+</head>
+
+<body>
+
+    <div id="spinner" class="spinner-box">
+        <div class="solar-system">
+            <div class="first-orbit orbit">
+                <div onclick="openPlanet(0)" class="planet div-a">
+                    <img class="img-a" src="./iconos/animacion.svg">
+                </div>
+                <div class="second-orbit orbit">
+                    <div onclick="openPlanet(1)" class="planet div-a">
+                        <img class="img-a" src='./iconos/anuncios.svg'>
+                    </div>
+                    <div class="third-orbit orbit">
+                        <div onclick="openPlanet(2)" class="planet div-a">
+                            <img class="img-a" src='./iconos/bandera.svg'>
+                        </div>
+                        <div class="fourth-orbit orbit">
+                            <div onclick="openPlanet(3)" class="planet
+                                    div-a">
+                                <img class="img-a" src='./iconos/ecommerce.svg'>
+                            </div>
+                            <div class="fifth-orbit orbit">
+                                <div onclick="openPlanet(4)" class="planet
+                                        div-a">
+                                    <img class="img-a" src='./iconos/email_marketing.svg'>
+                                </div>
+                                <div class="sixth-orbit orbit">
+                                    <div onclick="openPlanet(5)" class="planet
+                                         div-a">
+                                        <img class="img-a" src='./iconos/eventos.svg'>
+                                    </div>
+                                    <div class="seventh-orbit orbit">
+                                        <div onclick="openPlanet(6)" class="planet  div-a">
+                                            <img class="img-a" src='./iconos/fotografia_video.svg'>
+                                        </div>
+                                        <div class="eighth-orbit orbit">
+                                            <div onclick="openPlanet(7)" class="planet  div-a">
+                                                <img class="img-a" src='./iconos/iluminacion_sonido.svg'>
+                                            </div>
+                                            <div class="nineth-orbit orbit">
+                                                <div onclick="openPlanet(8)" class="planet
+                                                         div-a">
+                                                    <img class="img-a" src='./iconos/posicionamiento.svg'>
+                                                </div>
+                                                <div class="planet-center">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="net" class="div-b">
+        <img class="net" src="./iconos/net.svg" alt="net">
+    </div>
+
+    <div class="star-field">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+    </div>
+
+
+
+    <div id="astronaut" class="div-b" style="margin-top: -30%; margin-right: -5%; width: 100%;">
+        <img class="img-b astronaut" src="./iconos/astronaut.svg" alt="astronaut">
+    </div>
+
+
+    <div id="myModal" class="modal">
+        <div id="modal-content">
+            <img id="button-back-modal" class="back-arrow" style="margin-right: 5%; cursor: pointer;"
+                src="./iconos/back-arrow.svg" alt="back">
+            <div class="modal-center">
+                <div style="display: flex; justify-content: center;">
+                    <h4 id="title-modal"></h4>
+                    <img id="closeBtn" style="cursor: pointer; margin-left: 20%; margin-top: -5%;"
+                        src="./iconos/close.svg" alt="close">
+                </div>
+                <hr />
+                <div class="modal-first-paraph">
+                    <img style="vertical-align: middle;" src="./iconos/paraph1.png" alt="paraph" width="25%">
+                    <div>
+                        <p id="subtitle-modal" class="subtitle-modal">
+                        </p>
+                        <p id="description-modal" class="description-modal">
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <p style="color: white; font-family: nunito; font-size: 18px;">Incluye</p>
+                <div id="all-features-modal">
+                </div>
+                <div style="align-content: center; display: flex; align-items: center; justify-content: center;">
+                    <!-- Reemplazar 'http://www.google.cl' por la página a la que llevará el botón 'Contratar', formato 
+                    'http://www.pagina.cl'
+                    -->
+                    <button id="myBtnContratar" class="button-contratar"
+                        onclick="window.open('http://www.google.cl')">Contratar</button>
+                </div>
+            </div>
+            <img id="button-next-modal" class="next-arrow" style="margin-left: 5%; cursor: pointer;"
+                src="./iconos/next-square.svg" alt="next">
+        </div>
+        <div class="desliza">
+            DESLIZA O PUEDES USAR EL TECLADO PARA NAVEGAR
+        </div>
+
+    </div>
+
+    <div id="title" class="title">
+        <img src="./iconos/up-title.svg" alt="img">
+        <h2>
+            AGENCIA DIGITAL
+        </h2>
+        <h1>
+            TE LLEVAMOS A OTROS HORIZONTES
+        </h1>
+        <h3>Conoce nuestras
+            orbitas</h3>
+        <button id="myBtn" class="button-start">Comenzar</button>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

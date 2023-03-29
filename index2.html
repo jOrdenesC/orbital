@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Solar</title>
+</head>
+
+<body>
+    <div id="net" style="margin-top: 500px; width: 100%;" class="div-b">
+        <img src="./net.svg" width="100%" alt="red">
+    </div>
+
+    <div id="astronaut" style="margin-top: -30%; margin-left: -10%; width: 100%;" class="div-b">
+        <img class="img-b" src="./astronaut.svg" width="25%" alt="astronaut">
+    </div>
+
+    <div class="star-field">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+    </div>
+
+
+
+    <div  id="title" style="width: 22%; margin-top:
+            -63%; margin-right: 60%;">
+        <img src="./up-title.svg" alt="img" width="15%">
+        <h2 style="color: white; font-size: 20px; font-family: 'vibe'; pointer-events: none; margin-top: -1px;">
+            AGENCIA DIGITAL
+        </h2>
+        <h1 style="color: white; font-family: 'nunito'; font-size: 50px; pointer-events: none; margin-top: -10px;">
+            TE LLEVAMOS A OTROS HORIZONTES
+        </h1>
+        <h3 style="color: white; pointer-events: none; font-family: 'nunito'; margin-top: -15px;">Conoce nuestras
+            orbitas</h3>
+        <button id="myBtn" style="font-family: nunito;" class="button-start">Comenzar</button>
+    </div>
+
+    <div id="spinner" class="spinner-box">
+        <div class="solar-system">
+            <div class="first-orbit orbit">
+                <div class="planet first div-a">
+                    <img class="img-a" src="./iconos/animacion.svg">
+                </div>
+                <div class="second-orbit orbit">
+                    <div class="planet second div-a">
+                        <img class="img-a" src='./iconos/anuncios.svg'>
+                    </div>
+                    <div class="third-orbit orbit">
+                        <div class="planet third div-a">
+                            <img class="img-a" src='./iconos/bandera.svg'>
+                        </div>
+                        <div class="fourth-orbit orbit">
+                            <div class="planet fourth
+                                    div-a">
+                                <img class="img-a" src='./iconos/ecommerce.svg'>
+                            </div>
+                            <div class="fifth-orbit orbit">
+                                <div class="planet fifth
+                                        div-a">
+                                    <img class="img-a" src='./iconos/email_marketing.svg'>
+                                </div>
+                                <div class="sixth-orbit orbit">
+                                    <div class="planet
+                                            sixth div-a">
+                                        <img class="img-a" src='./iconos/eventos.svg'>
+                                    </div>
+                                    <div class="seventh-orbit orbit">
+                                        <div class="planet seventh div-a">
+                                            <img class="img-a" src='./iconos/fotografia_video.svg'>
+                                        </div>
+                                        <div class="eighth-orbit orbit">
+                                            <div class="planet eighth div-a">
+                                                <img class="img-a" src='./iconos/iluminacion_sonido.svg'>
+                                            </div>
+                                            <div class="nineth-orbit orbit">
+                                                <div class="planet
+                                                        nineth div-a">
+                                                    <img class="img-a" src='./iconos/posicionamiento.svg'>
+                                                </div>
+                                                <div class="planet-center">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div id="modal-content">
+            <img id="button-back-modal" style="margin-right: 10%; cursor: pointer;" src="./back-arrow.svg" width="10%" alt="">
+            <div class="modal-center">
+                <div style="display: flex; ">
+                    <h3 id="title-modal" style="color: #D752D9
+                    ; font-family: 'vibe-bold'; margin-top: 1%;"></h3>
+                    <img id="closeBtn" style="cursor: pointer; margin-left: 20%; margin-top: -5%;" src="./close.svg"
+                        alt="close">
+                </div>
+                <hr />
+                <div class="modal-first-paraph">
+                    <img style="vertical-align: middle;" src="./paraph1.png" alt="paraph" width="25%">
+                    <p id="description-modal" style="color: #C6FF00; font-size: 15px; margin-left: 10%; font-family: 'nunito';"></p>
+                </div>
+                <hr />
+                <p style="color: white; font-family: nunito; font-size: 20px;">Incluye</p>
+                <div id="all-features-modal">
+                </div>
+                
+                <!-- <div class="features">
+                    <img src="./interface.svg" width="7%" alt="">
+                    <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito';">
+                        Diseño y dirección de arte para contenido.</p>
+                </div>
+                <div class="features">
+                    <img src="./interface.svg" width="7%" alt="">
+                    <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito';">
+                        Creación de contenido creativo como: Carruseles, Reels, Stories, Caja de preguntas, Juegos,
+                        Memes, etc.</p>
+                </div>
+                <div class="features">
+                    <img src="./interface.svg" width="7%" alt="">
+                    <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito';">
+                        Programación de contenido según calendario y activación de stories diarias.</p>
+                </div>
+                <div class="features">
+                    <img src="./interface.svg" width="7%" alt="">
+                    <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito';">
+                        Reporte de métricas mensual.</p>
+                </div>
+                <div class="features">
+                    <img src="./interface.svg" width="7%" alt="">
+                    <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito';">
+                        Respuesta y moderación de comentarios en publicaciones.</p>
+                </div>
+                <div class="features">
+                    <img src="./interface.svg" width="7%" alt="">
+                    <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito';">
+                        Respuesta y moderación de comentarios en publicaciones.</p>
+                </div> -->
+                <div style="align-content: center; display: flex; align-items: center; justify-content: center;">
+                    <button id="myBtnContratar" style="font-family: nunito;" class="button-contratar"
+                        onclick="window.open('http://www.google.cl')">Contratar</button>
+                </div>
+            </div>
+            <img id="button-next-modal" style="margin-left: 10%; cursor: pointer;" src="./next-square.svg" width="15%" alt="">
+        </div>
+        <div style="width: 10%; color: white; margin-top: -8%; font-family: 'nunito'; text-align: end; margin-left: 70%;">
+            DESLIZA O PUEDES USAR EL TECLADO PARA NAVEGAR
+        </div>
+    </div>
+    
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
