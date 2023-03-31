@@ -284,3 +284,58 @@ document.onkeydown = function (e) {
     backButton.click()
   }
 }
+
+let touchstartX = 0
+let touchendX = 0
+
+function getTouch() {
+  if (touchendX < touchstartX) {
+    return 'left'
+  } else if (touchendX > touchstartX) {
+    return 'right'
+  }
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+  console.log('add touch');
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  let res = getTouch()
+  if(res == 'left'){
+    console.log('LEFT');
+    if (actualNumber + 1 != infoServices.length) {
+      modalContent.className = "modal-content animate__animated animate__zoomOut"
+      setTimeout(() => {
+        next(actualNumber + 1)
+        // titleModal.innerHTML = info.title
+        // descModal.innerHTML = info.description
+        // if (info.haveSubTitle) {
+        //   subtitleModal.innerHTML = info.subtitle
+        // }
+        //  allFeaturesModal.innerHTML = ''
+        modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
+      }, 500);
+    }
+  }else{
+    console.log('RIGHT');
+
+    if (actualNumber != 0) {
+      modalContent.className = "modal-content animate__animated animate__zoomOut"
+      setTimeout(() => {
+        back(actualNumber - 1)
+        // titleModal.innerHTML = info.title
+        // descModal.innerHTML = info.description
+        // if (info.haveSubTitle) {
+        //   subtitleModal.innerHTML = info.subtitle
+        // }
+  
+        // allFeaturesModal.innerHTML = ''
+  
+        modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
+      }, 500);
+    }
+  }
+})
