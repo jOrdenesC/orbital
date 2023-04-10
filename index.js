@@ -19,7 +19,21 @@ var title = document.getElementById("title");
 
 // Get the element that closes the modal
 var span = document.getElementById("closeBtn");
+var loading = true;
 //List of services and descriptions
+
+setTimeout(function () {
+  document.getElementById("loading").className = "animate__animated animate__fadeOut";
+}, 3000);
+
+setTimeout(function () {
+  document.getElementById("loading").style.display = "none";
+}, 3100);
+
+window.onload = function () {
+  document.getElementById("loading").style.display = "block";
+}
+
 const infoServices = [
   {
     'haveSubTitle': false,
@@ -139,6 +153,17 @@ const infoServices = [
   }
 ]
 
+const deviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+  else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    return "mobile";
+  }
+  return "desktop";
+};
+
 
 
 // When the user clicks on the button, open the modal
@@ -148,7 +173,6 @@ btn.onclick = function () {
   net.className = "div-a animate__animated animate__fadeOutDown animate__slow"
   astronaut.className = "div-b spinner-box animate__animated animate__fadeOutRight animate__slow"
   title.className = "animate__animated animate__fadeOutLeft animate__slow"
-  // spinner.style.display = "none"
   openModal(actualNumber)
 }
 
@@ -176,12 +200,15 @@ window.onclick = function (event) {
 }
 
 function openPlanet(actualPage) {
-  modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
-  spinner.className = "spinner-box animate__animated animate__fadeOutDown animate__slow"
-  net.className = "div-a animate__animated animate__fadeOutDown animate__slow"
-  astronaut.className = "div-b spinner-box animate__animated animate__fadeOutRight animate__slow"
-  title.className = "animate__animated animate__fadeOutLeft animate__slow"
-  openModal(actualPage)
+  const device = deviceType()
+  if (device == 'desktop') {
+    modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
+    spinner.className = "spinner-box animate__animated animate__fadeOutDown animate__slow"
+    net.className = "div-a animate__animated animate__fadeOutDown animate__slow"
+    astronaut.className = "div-b spinner-box animate__animated animate__fadeOutRight animate__slow"
+    title.className = "animate__animated animate__fadeOutLeft animate__slow"
+    openModal(actualPage)
+  }
 }
 
 
@@ -208,12 +235,6 @@ nextButton.onclick = function () {
     modalContent.className = "modal-content animate__animated animate__zoomOut"
     setTimeout(() => {
       next(actualNumber + 1)
-      // titleModal.innerHTML = info.title
-      // descModal.innerHTML = info.description
-      // if (info.haveSubTitle) {
-      //   subtitleModal.innerHTML = info.subtitle
-      // }
-      //  allFeaturesModal.innerHTML = ''
       modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
     }, 500);
   }
@@ -224,14 +245,6 @@ backButton.onclick = function () {
     modalContent.className = "modal-content animate__animated animate__zoomOut"
     setTimeout(() => {
       back(actualNumber - 1)
-      // titleModal.innerHTML = info.title
-      // descModal.innerHTML = info.description
-      // if (info.haveSubTitle) {
-      //   subtitleModal.innerHTML = info.subtitle
-      // }
-
-      // allFeaturesModal.innerHTML = ''
-
       modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
     }, 500);
   }
@@ -284,58 +297,3 @@ document.onkeydown = function (e) {
     backButton.click()
   }
 }
-
-let touchstartX = 0
-let touchendX = 0
-
-function getTouch() {
-  if (touchendX < touchstartX) {
-    return 'left'
-  } else if (touchendX > touchstartX) {
-    return 'right'
-  }
-}
-
-document.addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX
-  console.log('add touch');
-})
-
-document.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX
-  let res = getTouch()
-  if(res == 'left'){
-    console.log('LEFT');
-    if (actualNumber + 1 != infoServices.length) {
-      modalContent.className = "modal-content animate__animated animate__zoomOut"
-      setTimeout(() => {
-        next(actualNumber + 1)
-        // titleModal.innerHTML = info.title
-        // descModal.innerHTML = info.description
-        // if (info.haveSubTitle) {
-        //   subtitleModal.innerHTML = info.subtitle
-        // }
-        //  allFeaturesModal.innerHTML = ''
-        modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
-      }, 500);
-    }
-  }else{
-    console.log('RIGHT');
-
-    if (actualNumber != 0) {
-      modalContent.className = "modal-content animate__animated animate__zoomOut"
-      setTimeout(() => {
-        back(actualNumber - 1)
-        // titleModal.innerHTML = info.title
-        // descModal.innerHTML = info.description
-        // if (info.haveSubTitle) {
-        //   subtitleModal.innerHTML = info.subtitle
-        // }
-  
-        // allFeaturesModal.innerHTML = ''
-  
-        modalContent.className = "modal-content animate__animated animate__zoomIn description-modal title-modal subtitle-modal"
-      }, 500);
-    }
-  }
-})
