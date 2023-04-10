@@ -19,7 +19,6 @@ var title = document.getElementById("title");
 
 // Get the element that closes the modal
 var span = document.getElementById("closeBtn");
-var loading = true;
 //List of services and descriptions
 
 setTimeout(function () {
@@ -28,10 +27,23 @@ setTimeout(function () {
 
 setTimeout(function () {
   document.getElementById("loading").style.display = "none";
+  spinner.style.display = "flex"
+  net.style.display = "flex"
+  astronaut.style.display = "flex"
+  title.style.display = "block"
+  spinner.className = "spinner-box animate__animated animate__fadeInUp animate__slow"
+  net.className = "div-a animate__animated animate__fadeInUp animate__slow"
+  astronaut.className = "div-b animate__animated animate__fadeInRight animate__slow"
+  title.className = "animate__animated animate__fadeInLeft animate__slow title"
+  modal.style.display = "none"
 }, 3100);
 
 window.onload = function () {
   document.getElementById("loading").style.display = "block";
+  spinner.style.display = "none"
+  astronaut.style.display = "none"
+  net.style.display = "none"
+  title.style.display = "none"
 }
 
 const infoServices = [
