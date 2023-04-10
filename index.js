@@ -36,7 +36,7 @@ setTimeout(function () {
   astronaut.className = "div-b animate__animated animate__fadeInRight animate__slow"
   title.className = "animate__animated animate__fadeInLeft animate__slow title"
   modal.style.display = "none"
-}, 3100);
+}, 3200);
 
 window.onload = function () {
   document.getElementById("loading").style.display = "block";
