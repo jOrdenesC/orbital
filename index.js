@@ -237,7 +237,7 @@ function openModal(actualPage) {
     allFeaturesModal.innerHTML += `<div class="features">
       <img src = "./iconos/interface.svg" class="asterisk" alt = "asterisk">
         <p class="features-item">
-          ${el} </p>
+          ${el}</p>
     </div >`
   })
 }
@@ -275,10 +275,10 @@ function next(actualPage) {
   allFeaturesModal.innerHTML = ''
   info.features.forEach((el) => {
     allFeaturesModal.innerHTML += `<div class="features">
-      <img src = "./iconos/interface.svg" width = "25px" alt = "">
-        <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito'; text-align: left;">
-          ${el} </p>
-    </div >`
+    <img src = "./iconos/interface.svg" class="asterisk" alt = "asterisk">
+      <p class="features-item">
+        ${el}</p>
+  </div >`
   })
 }
 
@@ -294,10 +294,10 @@ function back(actualPage) {
   allFeaturesModal.innerHTML = ''
   info.features.forEach((el) => {
     allFeaturesModal.innerHTML += `<div class="features">
-      <img src = "./iconos/interface.svg" width = "25px" alt = "">
-        <p style="color: white; font-size: 15px; margin-left: 5%; font-family: 'nunito'; text-align: left;">
-          ${el} </p>
-    </div >`
+    <img src = "./iconos/interface.svg" class="asterisk" alt = "asterisk">
+      <p class="features-item">
+        ${el}</p>
+  </div >`
   })
 }
 
